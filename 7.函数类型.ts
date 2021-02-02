@@ -10,12 +10,13 @@ var funcVar = function(name:string,age:number=18):number{
   return age
 }
 funcVar('张三') //不会报错
-
+// 方法一
 var funcVar2:(name:string,age:number) => number=function(name:string,age:number=18):number {
   return age
 } 
 funcVar2("张三",12) //有作用
 
+// 方法二
 interface IStateFun {
   (name:string,age:number):number
 }
