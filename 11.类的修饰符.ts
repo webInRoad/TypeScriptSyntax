@@ -16,7 +16,7 @@ class Child2 extends Person2 {
 }
 var child = new Child()
 child.callParent()
-Child.test()
+Child2.test()
 
 class Person5 {
 	constructor(private name: string, private age: number) {}
