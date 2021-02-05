@@ -52,3 +52,8 @@ function getAssert(name: string, age: number) {
 	// return (name as string).length
 	return name.length //不会报错
 }
+
+function test() {
+	console.info(arguments)
+	// let arr5: any[] = arguments
+}
