@@ -76,21 +76,25 @@ class CellPhone2 implements RadioWithBattery {
 abstract class People {
 	abstract name: string
 	age: number
-	constructor(name: string, age: number) {
-		this.name = name
+	constructor(age: number) {
+		// this.name = name
 		this.age = age
 	}
-	eat(): void {
-		console.info(`his name is ${this.name},age is ${this.age}`)
+	commonInfo(): void {
+		console.info(`his name is ${this.name},age is ${this.age}`) //his name is 张三,age is 22
 	}
 	abstract getInfo()
 }
 class Man extends People {
 	name: string
+	constructor(name, age) {
+		super(age)
+		this.name = name
+	}
 	getInfo() {
 		console.info(this.name)
 	}
 }
 const zs = new Man('张三', 22)
-zs.eat()
+zs.commonInfo()
 zs.getInfo()
