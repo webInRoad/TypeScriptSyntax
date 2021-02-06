@@ -1,5 +1,5 @@
 abstract class Shape {
-	abstract draw(gd): void
+	draw(gd): void {}
 	abstract area(): number
 	abstract pointin(x: number, y: number): boolean
 }
@@ -8,9 +8,9 @@ class Rect extends Shape {
 	constructor(private width: number, private height: number) {
 		super()
 	}
-	draw(gd): void {
-		gd.fillRect(0, 0, this.width, this.height)
-	}
+	// draw(gd): void {
+	// 	gd.fillRect(0, 0, this.width, this.height)
+	// }
 	area(): number {
 		return this.width * this.height
 	}
@@ -23,9 +23,9 @@ class Circle extends Shape {
 	constructor(private cx: number, private cy: number, private r: number) {
 		super()
 	}
-	draw(gd) {
-		gd.arc()
-	}
+	// draw(gd) {
+	// 	gd.arc()
+	// }
 	area() {
 		return Math.PI * Math.pow(this.r, 2)
 	}

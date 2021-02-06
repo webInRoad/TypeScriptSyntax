@@ -9,7 +9,10 @@ var ageNum: number = funcType('张三', 18)
 var funcVar = function (name: string, age: number = 18): number {
 	return age
 }
-funcVar('张三') //不会报错
+// var newFun: string = funcVar //会报错，因为funcVar这个变量是函数类型,虽然没有显式定义，但ts会类型推断出funcVar类型
+var newFun: (name: string, age?: number) => number = funcVar
+var age1: number = funcVar('张三') //不会报错,因为参数age设置了默认值
+// 显式定义
 // 方法一
 // 中间那个number是因为要返回的是number类型，所以只能是number
 var funcVar2: (name: string, age: number) => number = function (
