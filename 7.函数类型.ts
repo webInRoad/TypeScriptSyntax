@@ -52,3 +52,22 @@ function getAssert(name: string, age: number) {
 	// return (name as string).length
 	return name.length //不会报错
 }
+
+function getLength(input: string | number):number {
+  // return input.length
+  const str = input as String; //大写String
+  if(str.length) {
+    return str.length
+  } else {
+    const number = input as number
+    return number.toString().length
+  }
+}
+// 或者
+function getLength2(input: string | number):number {
+ if((<string>input).length){
+   return (<string>input).length
+ } else {
+   return input.toString().length
+ }
+}

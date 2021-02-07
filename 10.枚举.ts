@@ -10,7 +10,7 @@ enum Days {
 Days[1] == 'mon'
 
 enum Gender {
-  Male,
+  Male = 10,
   Female
 }
 
