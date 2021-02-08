@@ -16,16 +16,14 @@ class Child2 extends Person2 {
 }
 var child = new Child()
 child.callParent()
-Child.test()
-
+Child2.test()
 
 class Person5 {
-  constructor(private name:string,private age:number) {
-  }
-  public show():void {
-    console.info(`名字:${this.name},年龄:${this.age}`)
-  }
+	constructor(private name: string, private age: number) {}
+	public show(): void {
+		console.info(`名字:${this.name},年龄:${this.age}`)
+	}
 }
 
-let p5:Person5 = new Person5("blue",23)
+let p5: Person5 = new Person5('blue', 23)
 p5.show()
